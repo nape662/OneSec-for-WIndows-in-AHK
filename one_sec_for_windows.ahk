@@ -9,6 +9,7 @@ SetTimer(CheckForCeleste, 1000)
 black_screen_active := false
 cooldown := 0
 black_screen_length := 10000  ; Length of the black screen in milliseconds (10 seconds)
+black_screen_text := "A smol pause from gaimin"
 game_exe := "ahk_exe Celeste.exe"
 max_cooldown := 15 * 60  ; Cooldown length in seconds (15 minutes)
 FilePath := "C:\Users\peter\OneDrive\Documents\AutoHotkey\Intentions log.txt"
@@ -33,6 +34,7 @@ CheckForCeleste() {
 ShowBlackScreen() {
     global black_screen_active
     global black_screen_length
+    global black_screen_text
     black_screen_active := true
 
     DllCall("ShowCursor", "Int", false)
@@ -40,7 +42,7 @@ ShowBlackScreen() {
     MyGui.Opt("+AlwaysOnTop -Caption +Disabled +Owner")
     MyGui.BackColor := "Black"
     MyGui.SetFont("s40", "Times New Roman")
-    MyGui.Add("Text", "x600 y425 cWhite vMyText", "A smol pause from gaimin")
+    MyGui.Add("Text", "x600 y425 cWhite vMyText", black_screen_text)
     MyGui.Show("x0 y0 w1920 h1080 NoActivate")
     Sleep(black_screen_length)
     MyGui.Destroy()
