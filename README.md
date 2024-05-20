@@ -1,3 +1,4 @@
+- Requires AHK 2.0 installed
 - This script automatically closes a chosen app upon its launch, creates an always-on-top black screen for black_screen_length seconds, then asks you for the reason you play, in case you didn't answer "nothing" or "nothin", asks for the duration of the session, and allows you to play at max max_cooldown minutes. 
 - It works best if you already use AHK 2.0, put this into your everyday file to reduce the temptaion to just close the script.
 - It also only works if you don't actually have a burning desire to play, but rather a compulsive habit of launching it.
