@@ -1,3 +1,6 @@
+- This script automatically closes a chosen app upon its launch, creates an always-on-top black screen for black_screen_length seconds, then asks you for the reason you play, in case you didn't answer "nothing" or "nothin", asks for the duration of the session, and allows you to play at max max_cooldown minutes. 
+- It works best if you already use AHK 2.0, put this into your everyday file to reduce the temptaion to just close the script.
+- It also only works if you don't actually have a burning desire to play, but rather a compulsive habit of launching it.
 - You should edit the global variables, each one is self-explanatory, except the FilePath: it's the path of the file, where your reasons to play are stored. You can comment out with ";" the `FileAppend(UserGoal.Value "n", FilePath)` line if you don't want to store those reasons.
 - Keep the "ahk_exe" as a part of your application name.
 - Only works on one app at the moment, support of a list of apps may come later.
