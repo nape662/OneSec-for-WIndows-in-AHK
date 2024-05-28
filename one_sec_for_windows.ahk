@@ -1,5 +1,5 @@
 
-
+#Requires AHK v2.0
 ; --- Hotkeys and HotIf Definitions ---
 #HotIf black_screen_active
 LWin::Return
