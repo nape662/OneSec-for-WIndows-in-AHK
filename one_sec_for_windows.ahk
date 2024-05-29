@@ -14,7 +14,7 @@ max_cooldown := 15 * 60  ; Cooldown length in seconds (15 minutes)
 
 application_names := ["ahk_exe Celeste.exe", "ahk_exe Discord.exe"]
 application_paths := ["Your\Path\To\Celeste.exe", "And\Your\Shortcut\Or\Path\To\Discord.exe"] 
-LogFilePath := "C:\Users\peter\OneDrive\Documents\AutoHotkey\Intentions log.txt"
+LogFilePath := "Your\Path\To\Intentions log.txt"
 
 cooldowns := []
 Loop application_names.Length
@@ -78,7 +78,7 @@ UserGoalAndTime(gameIndex) {
         TimeString := FormatTime(A_Now, "dd.MM.yyyy HH:mm")
         MinutesEntered := EnterInteger()
         cooldowns[gameIndex] := Min(MinutesEntered * 60, max_cooldown)
-        FileAppend(UserGoal.Value " - " MinutesEntered " minutes entered at " TimeString "`n", LogFilePath)
+        FileAppend(UserGoal.Value " " MinutesEntered " mins for " application_names[gameIndex] " at " TimeString "`n", LogFilePath)
         if (cooldowns[gameIndex] > 0) {
             Run(application_paths[gameIndex])
         } else {
